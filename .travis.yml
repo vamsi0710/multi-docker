@@ -20,7 +20,6 @@ after_success:
  - docker push vamsisakhamuri/multi-server
  - docker push vamsisakhamuri/multi-worker
 deploy:
- edge: true
  provider: elsticbeanstalk
  region: us-east-2
  app: multi-docker
@@ -31,3 +30,4 @@ deploy:
   branch: master
  access_key_id: $AWS-ACCESS-KEY
  secret_access_key: $AWS-SECRET-KEY
+ edge: true
